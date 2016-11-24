@@ -4,10 +4,12 @@ var Main = React.createClass({
 
     render: function () {
         return (
-            <div> Sup from the main component </div>
+            <div>
+            Sup from the main component
             {this.props.children}
+            </div>
         )
     }
 });
 
-module.exports Main;
+module.exports = Main;
