@@ -15,6 +15,22 @@ var USER_DATA = {
 //     }
 // })
 //
+
+var SomeLink = React.createClass({
+
+    changeURL: function () {
+        window.location.replace(this.props.href)
+    },
+
+    render: function () {
+        return (
+            <span style={{color: 'blue', cursor: 'pointer'}} onClick={this.changeURL}>
+            {this.props.children}
+            </span>
+        )
+    }
+
+})
 var ProfilePic = React.createClass({
     render: function () {
         return (
@@ -27,9 +43,9 @@ var ProfileLink = React.createClass({
     render: function () {
         return (
             <div>
-                <a href={'https://github.com/' + this.props.username}>
+                <SomeLink href={'https://github.com/' + this.props.username}>
                 {this.props.username}
-                </a>
+                </SomeLink>
             </div>
         )
     }
